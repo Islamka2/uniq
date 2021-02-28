@@ -19,8 +19,6 @@
     height: 30px;
 }
 
-.card-img-top{
-    display: block;
-    width: 100px;
-    height: 100px !important;
+.test{
+    width: 500px;
 }

@@ -27,9 +27,9 @@
     echo 'lol';
 
     if($result){
-        for($i = 0; $i < $rows; $i++) {
+        for($i = 1; $i < $rows; $i++) {
             $row = mysqli_fetch_row($result);
-            echo "<div class='card mb-3'>
+            echo "<div class='card test mb-3'>
         <img class='card-img-top' src='images/$row[2]' alt='Card image cap'>
         <div class='card-body'>
             <h5 class='card-title'>$row[1]</h5>
@@ -61,25 +61,25 @@
                 $name_img = $_FILES['img']['name'];
                 $tmp_img = $_FILES['img']['tmp_name'];
                 $local_image = 'images/';
-                $upload = move_uploaded_file($tmp_img, $local_image.$name_img);
-                if($upload){
-                    echo "Файл загружен".$name_img;
+                echo $tmp_img;
+                if(move_uploaded_file($tmp_img, $local_image.$name_img)) {
+                    echo 'Файл добавлен';
+                }else{
+                    echo 'Файл не добавлен';
+                }
 
-                }else {
-                    echo ' Файл не загружен';
-            }
         }
             }else {
                 echo 'Не поддерживаемый формат';
             }
             $local_image = 'images/';
-            $upload = move_uploaded_file($tmp_img, $local_image.$name_img);
-            if($upload){
-                echo "Файл загружен".$name_img;
+            // $upload = move_uploaded_file($tmp_img, $local_image.$name_img);
+            // if($upload){
+            //     echo "Файл загружен".$name_img;
 
-            }else {
-                echo ' Файл не загружен';
-            }
+            // }else {
+            //     echo ' Файл не загружен';
+            // }
         } else {
             echo 'ne test';
         }
