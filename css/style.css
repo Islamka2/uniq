@@ -1,0 +1,26 @@
+.add_mp {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    border: solid black 1px;
+}
+.input-text {
+    height: 30px;
+    border: solid black 1px;
+
+}
+.submit-mp {
+    background-color:yellowgreen;
+    width: 200px;
+    height: 30px;
+}
+
+.card-img-top{
+    display: block;
+    width: 100px;
+    height: 100px !important;
+}
